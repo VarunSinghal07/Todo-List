@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
-const url = process.env.MONGO_URL;
+const url = process.env.MONGODB_URI;
 mongoose.connect(""+url);
 
 const itemsSchema = {
